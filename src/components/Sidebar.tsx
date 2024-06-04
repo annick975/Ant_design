@@ -3,7 +3,7 @@ import { FaLeaf } from "react-icons/fa6";
 import {
   UserOutlined,
   ProfileOutlined,
-  LoginOutlined,
+  LogoutOutlined,
   OrderedListOutlined,
   CarryOutOutlined,
   SettingOutlined,
@@ -44,17 +44,15 @@ function Sidebar() {
             label: "Profile",
           },
           {
-          key: "3",
-          icon: <LoginOutlined />,
-          label: "",
-        },
-        
-       
-        {
-          key: "6",
-          icon: <SettingOutlined />,
-          label: "",
-        },
+            key: "5",
+            icon: <SettingOutlined />,
+            label: "Settings",
+          },
+          {
+            key: "6",
+            icon: <LogoutOutlined />,
+            label: "Logout",
+          }
         ]}
       />
     </>
@@ -62,3 +60,5 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
+
