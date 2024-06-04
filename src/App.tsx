@@ -1,6 +1,7 @@
 import { Button, Layout } from "antd";
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
+import CustomHeader from "./components/Header";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import "./App.css";
 
@@ -25,7 +26,9 @@ function App() {
         />
       </Sider>
       <Layout>
-        <Header className="header"></Header>
+        <Header className="header">
+          <CustomHeader />
+        </Header>
         <Content className="content"></Content>
       </Layout>
     </Layout>

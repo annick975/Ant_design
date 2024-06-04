@@ -40,3 +40,17 @@
   background-color: #0b6414 !important;
   color: #fff !important;
 }
+/* header */
+.header-icon{
+background: #d2e3c8;
+padding: 8px;
+border-radius: 20px;
+font-size: 15px;
+color: #4f6f52;
+cursor: pointer;
+}
+
+.ant-btn:hover{
+  color: #4f6f52 !important;
+  border-color: #4f6f52 !important;
+}
