@@ -1,5 +1,15 @@
-function SideContent() {
-  return <div style={{ width: 300 }}></div>;
+import { Flex } from "antd"
+import ContentSidebar from "./ContentSidebar"
+import Activity from "./Activity"
+
+
+const SideContent = () => {
+  return (
+    <Flex vertical gap="2.3rem" style={{width: 350}}>
+      <ContentSidebar />
+      <Activity />
+    </Flex>
+  )
 }
 
-export default SideContent;
+export default SideContent
