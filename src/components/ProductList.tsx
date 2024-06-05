@@ -1,7 +1,8 @@
-import React from 'react';
-import { Button, Flex, Typography } from "antd";
+import React from "react";
+import { Button, Card, Flex, Image, Typography } from "antd";
 import PlantData from "../PlantData.ts";
 
+const { Meta } = Card;
 const ProductList: React.FC = () => {
   return (
     <>
@@ -16,14 +17,18 @@ const ProductList: React.FC = () => {
 
       <Flex align="center" gap="large">
         {PlantData.map((plant) => (
-          <div key={plant.id}>
-            <Typography.Text>{plant.name}</Typography.Text>
-            <img src={plant.picture} alt={plant.name} style={{ width: '100px', height: '100px' }} />
-          </div>
+          <Card key={plant.id} hoverable className="plant-card">
+            <Image
+              src={plant.picture}
+              alt={plant.name}
+              style={{ width: "130px", height: "100px" }}
+            />
+            <Meta title={plant.name} style={{marginTop: "1rem"}}/>
+          </Card>
         ))}
       </Flex>
     </>
   );
-}
+};
 
 export default ProductList;

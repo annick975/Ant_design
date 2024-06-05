@@ -79,3 +79,11 @@
 .gray--color {
   color: rgb(182, 181, 181) !important;
 }
+
+/* Plant lists */
+
+.plant-card {
+  flex: 1;
+  height: 250px;
+  text-align: center;
+}
