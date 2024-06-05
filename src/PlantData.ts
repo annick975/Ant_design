@@ -2,7 +2,15 @@ import plant1 from "./assets/plant1.jpg";
 import plant2 from "./assets/plant2.jpg";
 import plant3 from "./assets/plant3.jpg";
 
-const plantData = [
+
+interface Plant {
+  id: number;
+  name: string;
+  picture: string;
+}
+
+
+const plantData: Plant[] = [
   {
     id: 1,
     name: "indoor plant",
