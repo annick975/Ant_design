@@ -18,7 +18,7 @@ const plantData: Plant[] = [
   },
   {
     id: 2,
-    name: "plastic plant",
+    name: "plastic flower",
     picture: plant2,
   },
   {
