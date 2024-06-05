@@ -3,7 +3,7 @@ import { Avatar, Button, Card, Divider, Flex, Tooltip, Typography } from "antd";
 const SellerLists = () => {
   return (
     <Flex align="center" justify="space-between" gap="large">
-      <Flex gap="small" className="top-seller">
+      <Flex vertical direction="column" gap="small" className="top-seller">
         <Flex align="center" justify="space-between">
           <Typography.Title level={5} className="primary--color">
             Top Sellers
@@ -60,15 +60,15 @@ const SellerLists = () => {
               <Typography.Text type="secondary" strong>
                 Over 5000 products sold
               </Typography.Text>
-              <Typography.Text type="secondary" strong>
+              {/* <Typography.Text type="secondary" strong>
                 10 Sellers
-              </Typography.Text>
+              </Typography.Text> */}
             </Flex>
           </Flex>
         </Card>
       </Flex>
 
-      <Flex gap="small" className="featured-seller">
+      <Flex vertical direction="column" gap="small" className="featured-seller">
         <Flex align="center" justify="space-between">
           <Typography.Title level={5} className="primary--color">
             Featured Sellers
@@ -122,12 +122,12 @@ const SellerLists = () => {
 
             <Divider type="vertical" className="divider" />
             <Flex>
-              <Typography.Text type="secondary" strong>
+              <Typography.Text type="secondary" strong >
                 520 products sold
               </Typography.Text>
-              <Typography.Text type="secondary" strong>
+              {/* <Typography.Text type="secondary" strong >
                 17 Sellers
-              </Typography.Text>
+              </Typography.Text> */}
             </Flex>
           </Flex>
         </Card>
