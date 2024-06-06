@@ -13,7 +13,7 @@ interface Plant {
 const plantData: Plant[] = [
   {
     id: 1,
-    name: "indoor plant",
+    name: "Nail polish",
     picture: plant1,
   },
   {
@@ -23,7 +23,7 @@ const plantData: Plant[] = [
   },
   {
     id: 3,
-    name: "short plants",
+    name: "VR Tools",
     picture: plant3,
   },
 ];

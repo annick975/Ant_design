@@ -20,7 +20,7 @@ const ProductList = () => {
             <Image
               src={plant.picture}
               alt={plant.name}
-              style={{ width: "130px", height: "100px" }}
+              style={{ width: "130px", height: "170px" }}
             />
             <Meta title={plant.name} style={{ marginTop: "1rem" }} />
           </Card>
