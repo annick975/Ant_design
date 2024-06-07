@@ -1,6 +1,6 @@
-import plant1 from "./assets/plant1.jpg";
-import plant2 from "./assets/plant2.jpg";
-import plant3 from "./assets/plant3.jpg";
+import product1 from "./assets/img1.jpg";
+import product2 from "./assets/img2.jpg";
+import product3 from "./assets/img3.jpg";
 
 
 interface Plant {
@@ -14,17 +14,17 @@ const plantData: Plant[] = [
   {
     id: 1,
     name: "Nail polish",
-    picture: plant1,
+    picture: product1,
   },
   {
     id: 2,
     name: "plastic flower",
-    picture: plant2,
+    picture: product2,
   },
   {
     id: 3,
     name: "VR Tools",
-    picture: plant3,
+    picture: product3,
   },
 ];
 

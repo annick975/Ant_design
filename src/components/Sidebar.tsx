@@ -1,5 +1,5 @@
 import { Flex, Menu } from "antd";
-import { FaLeaf } from "react-icons/fa6";
+import { FaOpencart } from "react-icons/fa";
 import {
   UserOutlined,
   ProfileOutlined,
@@ -14,7 +14,7 @@ function Sidebar() {
     <>
       <Flex align="center" justify="center">
         <div className="logo">
-          <FaLeaf />
+          <FaOpencart  />
         </div>
       </Flex>
 

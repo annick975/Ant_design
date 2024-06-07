@@ -6,39 +6,42 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import "./App.css";
 import MainContent from "./components/MainContent";
 import SideContent from "./components/SideContent";
+import { BrowserRouter as Router} from "react-router-dom";
 
 const { Sider, Header, Content } = Layout;
 function App() {
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <Layout>
-      <Sider
-        theme="light"
-        trigger={null}
-        collapsible
-        collapsed={collapsed}
-        className="sider"
-      >
-        <Sidebar />
-        <Button
-          type="text"
-          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          onClick={()=> setCollapsed(!collapsed)}
-          className="triger-btn"
-        />
-      </Sider>
+    <Router>
       <Layout>
-        <Header className="header">
-          <CustomHeader />
-        </Header>
-        <Content className="content">
-          <Flex gap="large">
-            <MainContent />
-            <SideContent />
-          </Flex>
-        </Content>
+        <Sider
+          theme="light"
+          trigger={null}
+          collapsible
+          collapsed={collapsed}
+          className="sider"
+        >
+          <Sidebar />
+          <Button
+            type="text"
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setCollapsed(!collapsed)}
+            className="triger-btn"
+          />
+        </Sider>
+        <Layout>
+          <Header className="header">
+            <CustomHeader />
+          </Header>
+          <Content className="content">
+            <Flex gap="large">
+              <MainContent />
+              <SideContent />
+            </Flex>
+          </Content>
+        </Layout>
       </Layout>
-    </Layout>
+    </Router>
   );
 }
 export default App;

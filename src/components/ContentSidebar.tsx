@@ -1,5 +1,5 @@
 import { Card, Flex, Image, Typography } from "antd";
-import plant from "../assets/plant2.jpg";
+import plant from "../assets/cart.jpg";
 
 const ContentSidebar = () => {
   return (
