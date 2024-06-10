@@ -6,13 +6,22 @@ import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import "./App.css";
 import MainContent from "./components/MainContent";
 import SideContent from "./components/SideContent";
-import { BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
+import Orders from "./pages/Orders";
+import ToDo from "./pages/ToDo";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import Logout from "./pages/Logout";
 
 const { Sider, Header, Content } = Layout;
 function App() {
   const [collapsed, setCollapsed] = useState(false);
-  return (
-    <Router>
+  return (<>
+    
+<BrowserRouter>
+
+
+    
       <Layout>
         <Sider
           theme="light"
@@ -38,10 +47,19 @@ function App() {
               <MainContent />
               <SideContent />
             </Flex>
+            <Routes>
+  {/* <Route path="/" element={}></Route>  This is for dashboard */}
+  <Route path="/orders" element={<Orders />}></Route>
+  <Route path="/todo" element={<ToDo />}></Route>
+  <Route path="/profile" element={<Profile />}></Route>
+  <Route path="/settings" element={<Settings />}></Route>
+  <Route path="/logout" element={<Logout />}></Route>
+</Routes>
           </Content>
         </Layout>
       </Layout>
-    </Router>
+      </BrowserRouter>
+      </>
   );
 }
 export default App;

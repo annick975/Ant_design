@@ -9,56 +9,62 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 
+import { Link, useLocation } from "react-router-dom";
+
 function Sidebar() {
+  const location = useLocation();
+
+  const getDefaultSelectedKey = () => {
+    switch (location.pathname) {
+      case "/orders":
+        return "2";
+      case "/todo":
+        return "3";
+      case "/profile":
+        return "4";
+      case "/settings":
+        return "5";
+      case "/logout":
+        return "6";
+      default:
+        return "1";
+    }
+  };
+
   return (
     <>
       <Flex align="center" justify="center">
         <div className="logo">
-          <FaOpencart  />
+          <FaOpencart />
         </div>
       </Flex>
 
       <Menu
         mode="inline"
-        defaultSelectedKeys={["1"]}
+        defaultSelectedKeys={[getDefaultSelectedKey()]}
         className="menu-bar"
-        items={[
-          {
-            key: "1",
-            icon: <UserOutlined />,
-            label: "Dashboard",
-          },
-          {
-            key: "2",
-            icon: <CarryOutOutlined />,
-            label: "My Orders",
-          },
-          {
-            key: "3",
-            icon: <OrderedListOutlined />,
-            label: "ToDo",
-          },
-          {
-            key: "4",
-            icon: <ProfileOutlined />,
-            label: "Profile",
-          },
-          {
-            key: "5",
-            icon: <SettingOutlined />,
-            label: "Settings",
-          },
-          {
-            key: "6",
-            icon: <LogoutOutlined />,
-            label: "Logout",
-          }
-        ]}
-      />
+      >
+        <Menu.Item key="1" icon={<UserOutlined />}>
+           <Link to="/"> DashBoard</Link>
+        </Menu.Item>
+        <Menu.Item key="2" icon={<CarryOutOutlined />}>
+          <Link to="/orders">My Orders</Link>
+        </Menu.Item>
+        <Menu.Item key="3" icon={<OrderedListOutlined />}>
+          <Link to="/todo">ToDo</Link>
+        </Menu.Item>
+        <Menu.Item key="4" icon={<ProfileOutlined />}>
+          <Link to="/profile"> Profile</Link>
+        </Menu.Item>
+        <Menu.Item key="5" icon={<SettingOutlined />}>
+          <Link to="/settings"> Settings</Link>
+        </Menu.Item>
+        <Menu.Item key="6" icon={<LogoutOutlined />}>
+          <Link to="/logout">Logout</Link>
+        </Menu.Item>
+      </Menu>
     </>
   );
 }
 
 export default Sidebar;
-
-
